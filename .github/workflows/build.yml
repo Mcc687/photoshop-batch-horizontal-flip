@@ -51,4 +51,5 @@ jobs:
           dist/*.zip dist/SHA256SUMS.txt
           --generate-notes
           --title "${{ github.ref_name }}"
+          --repo "${{ github.repository }}"
 
