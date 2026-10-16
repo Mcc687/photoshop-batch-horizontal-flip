@@ -1,6 +1,6 @@
 ﻿[CmdletBinding()]
 param(
-    [string]$Version = "1.2.0"
+    [string]$Version = "1.2.1"
 )
 
 $ErrorActionPreference = "Stop"
@@ -9,10 +9,11 @@ Set-StrictMode -Version Latest
 $repoRoot = $PSScriptRoot
 $sourceRoot = Join-Path $repoRoot "src"
 $distRoot = Join-Path $repoRoot "dist"
-$portableName = "PS图片批量水平翻转_便携版_v$Version"
-$portableRoot = Join-Path $distRoot $portableName
+$portableFolderName = "PS图片批量水平翻转_便携版_v$Version"
+$archiveName = "photoshop-batch-horizontal-flip-portable-v$Version.zip"
+$portableRoot = Join-Path $distRoot $portableFolderName
 $exePath = Join-Path $portableRoot "PS图片批量水平翻转.exe"
-$zipPath = Join-Path $distRoot "$portableName.zip"
+$zipPath = Join-Path $distRoot $archiveName
 
 $compilerCandidates = @(
     (Join-Path $env:WINDIR "Microsoft.NET\Framework64\v4.0.30319\csc.exe"),
@@ -54,7 +55,7 @@ Compress-Archive -LiteralPath $portableRoot -DestinationPath $zipPath -Compressi
 
 $checksum = (Get-FileHash -Algorithm SHA256 -LiteralPath $zipPath).Hash.ToLowerInvariant()
 Set-Content -LiteralPath (Join-Path $distRoot "SHA256SUMS.txt") `
-    -Value "$checksum  $portableName.zip" -Encoding ASCII
+    -Value "$checksum  $archiveName" -Encoding ASCII
 
 Write-Host "Built: $zipPath"
 Write-Host "SHA256: $checksum"

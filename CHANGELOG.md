@@ -2,6 +2,11 @@
 
 本项目遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
+## [1.2.1] - 2026-10-16
+
+- 修复 Windows PowerShell 5.1 在 GitHub Actions 中读取中文构建脚本时的编码问题。
+- 修正标签构建创建 GitHub Release 所需的权限隔离。
+
 ## [1.2.0] - 2026-10-16
 
 - 整理为可公开维护的 GitHub 项目。

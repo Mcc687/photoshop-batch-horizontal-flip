@@ -12,8 +12,8 @@ using System.Windows.Forms;
 [assembly: AssemblyTitle("PS 图片批量水平翻转")]
 [assembly: AssemblyDescription("使用 Photoshop 动作批量水平翻转、备份并自然排序重命名图片")]
 [assembly: AssemblyProduct("PS Batch Horizontal Flip")]
-[assembly: AssemblyVersion("1.2.0.0")]
-[assembly: AssemblyFileVersion("1.2.0.0")]
+[assembly: AssemblyVersion("1.2.1.0")]
+[assembly: AssemblyFileVersion("1.2.1.0")]
 
 namespace PhotoshopBatchFlip
 {
