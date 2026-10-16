@@ -1,0 +1,9 @@
+* text=auto
+*.cs text eol=crlf
+*.jsx text eol=lf
+*.ps1 text eol=crlf
+*.md text eol=lf
+*.txt text eol=crlf
+*.exe binary
+*.zip binary
+

@@ -1,0 +1,12 @@
+dist/
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.lnk
+*.psp
+*.atn
+Photoshop批处理错误.txt
+_原图备份_*/
+
