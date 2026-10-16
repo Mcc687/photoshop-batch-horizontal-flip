@@ -9,6 +9,9 @@ trim_trailing_whitespace = true
 [*.{cs,ps1,txt}]
 end_of_line = crlf
 
+[build.ps1]
+charset = utf-8-bom
+
 [*.cs]
 indent_style = space
 indent_size = 4
